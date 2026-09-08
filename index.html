@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -28,7 +29,7 @@ body{
 
 .container{
     width:100%;
-    max-width:1050px;
+    max-width:1200px;
 }
 
 /* HEADER */
@@ -106,8 +107,8 @@ body{
 
 .games{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
 .game-card{
@@ -117,8 +118,8 @@ body{
     color:#111827;
     background:#fff;
     border-radius:25px;
-    padding:30px;
-    min-height:280px;
+    padding:27px;
+    min-height:300px;
     box-shadow:0 15px 35px rgba(0,0,0,.25);
     transition:.25s ease;
     display:flex;
@@ -136,17 +137,19 @@ body{
 }
 
 .game-icon{
-    width:75px;
-    height:75px;
+    width:70px;
+    height:70px;
     border-radius:20px;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:42px;
-    margin-bottom:20px;
+    font-size:38px;
+    margin-bottom:18px;
 }
 
-.game-card:first-child .game-icon{
+/* WARNA ICON */
+
+.game-card:nth-child(1) .game-icon{
     background:linear-gradient(135deg,#dbeafe,#bfdbfe);
 }
 
@@ -154,37 +157,56 @@ body{
     background:linear-gradient(135deg,#fef3c7,#fde68a);
 }
 
+.game-card:nth-child(3) .game-icon{
+    background:linear-gradient(135deg,#dcfce7,#bbf7d0);
+}
+
+/* JUDUL */
+
 .game-card h3{
-    font-size:25px;
+    font-size:22px;
     margin:0 0 10px;
+    line-height:1.3;
 }
 
 .game-card p{
     margin:0;
     color:#64748b;
     line-height:1.6;
-    font-size:15px;
+    font-size:14px;
 }
 
+/* TOMBOL */
+
 .play{
-    margin-top:25px;
+    margin-top:22px;
     display:inline-flex;
     justify-content:center;
     align-items:center;
     gap:8px;
-    padding:13px 20px;
+    padding:12px 16px;
     border-radius:14px;
     color:#fff;
     font-weight:bold;
-    font-size:15px;
+    font-size:14px;
 }
 
-.game-card:first-child .play{
+/* TOMBOL GAME 1 */
+
+.game-card:nth-child(1) .play{
     background:#2563eb;
 }
 
+/* TOMBOL GAME 2 */
+
 .game-card:nth-child(2) .play{
     background:#d97706;
+}
+
+/* TOMBOL GAME 3 */
+
+.game-card:nth-child(3) .play{
+    background:#16a34a;
 }
 
 /* FOOTER */
@@ -195,6 +217,16 @@ body{
     color:#c7d2fe;
     font-size:13px;
     line-height:1.6;
+}
+
+/* TABLET */
+
+@media(max-width:950px){
+
+    .games{
+        grid-template-columns:repeat(2,1fr);
+    }
+
 }
 
 /* MOBILE */
@@ -246,147 +278,183 @@ body{
     }
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- HEADER -->
 
-    <div class="header">
+<!-- HEADER -->
 
-        <div class="badge">
-            KEGIATAN PENGABDIAN KEPADA MASYARAKAT
-        </div>
+<div class="header">
 
-        <h1>
-            Game Edukatif Matematika
-        </h1>
+    <div class="badge">
+        KEGIATAN PENGABDIAN KEPADA MASYARAKAT
+    </div>
 
-        <div class="judul">
-            Matematika Tanpa Hafalan:
-            Penanaman Konsep Perkalian Melalui Permainan Edukatif
-            bagi Siswa Sekolah Gugus II Payakumbuh
-        </div>
+    <h1>
+        Game Edukatif Matematika
+    </h1>
+
+    <div class="judul">
+        Matematika Tanpa Hafalan:
+        Penanaman Konsep Perkalian Melalui Permainan Edukatif
+        bagi Siswa Sekolah Gugus II Payakumbuh
+    </div>
+
+</div>
+
+
+<!-- TIM -->
+
+<div class="team">
+
+    <div class="team-title">
+        TIM PENGABDIAN KEPADA MASYARAKAT
+    </div>
+
+    <div class="team-list">
+
+        <div class="team-member">Pebrudal Zanu</div>
+        <div class="team-member">Helma</div>
+        <div class="team-member">Dewi Murni</div>
+        <div class="team-member">Muhammad Subhan</div>
+        <div class="team-member">Riry Sriningsih</div>
+        <div class="team-member">Yoli Agnesia</div>
+        <div class="team-member">Media Rosha</div>
+        <div class="team-member">Meira Parma Dewi</div>
+        <div class="team-member">Ayuni Kemala Safira</div>
+        <div class="team-member">Yusmet Rizal</div>
 
     </div>
 
-
-    <!-- TIM -->
-
-    <div class="team">
-
-        <div class="team-title">
-            TIM PENGABDIAN KEPADA MASYARAKAT
-        </div>
-
-        <div class="team-list">
-
-            <div class="team-member">Pebrudal Zanu</div>
-            <div class="team-member">Helma</div>
-            <div class="team-member">Dewi Murni</div>
-            <div class="team-member">Muhammad Subhan</div>
-            <div class="team-member">Riry Sriningsih</div>
-            <div class="team-member">Yoli Agnesia</div>
-            <div class="team-member">Media Rosha</div>
-            <div class="team-member">Meira Parma Dewi</div>
-            <div class="team-member">Ayuni Kemala Safira</div>
-            <div class="team-member">Yusmet Rizal</div>
-
-        </div>
-
-    </div>
+</div>
 
 
-    <!-- PILIHAN GAME -->
+<!-- PILIHAN GAME -->
 
-    <div class="game-title">
-        🎮 Pilih Permainan
-    </div>
-
-
-    <div class="games">
-
-        <!-- GAME 1 -->
-
-        <a
-            class="game-card"
-            href="https://pebrudal-blip.github.io/yin-yang/"
-        >
-
-            <div>
-
-                <div class="game-icon">
-                    ⚛️
-                </div>
-
-                <h3>
-                    Proton, Elektron & Netron
-                </h3>
-
-                <p>
-                    Pelajari konsep bilangan positif, negatif,
-                    dan nol melalui permainan partikel yang
-                    interaktif dan menyenangkan.
-                </p>
-
-            </div>
-
-            <div class="play">
-                ▶ Mulai Permainan
-            </div>
-
-        </a>
+<div class="game-title">
+    🎮 Pilih Permainan
+</div>
 
 
-        <!-- GAME 2 -->
+<div class="games">
 
-        <a
-            class="game-card"
-            href="https://pebrudal-blip.github.io/perkalianyin-yang/"
-        >
+    <!-- GAME 1 -->
 
-            <div>
-
-                <div class="game-icon">
-                    ✖️
-                </div>
-
-                <h3>
-                    Perkalian Yin Yang
-                </h3>
-
-                <p>
-                    Bangun pemahaman konsep perkalian melalui
-                    aktivitas meletakkan dan mengambil proton
-                    serta elektron.
-                </p>
-
-            </div>
-
-            <div class="play">
-                ▶ Mulai Permainan
-            </div>
-
-        </a>
-
-    </div>
-
-
-    <!-- FOOTER -->
-
-    <div class="footer">
+    <a
+        class="game-card"
+        href="https://pebrudal-blip.github.io/yin-yang/"
+    >
 
         <div>
-            🎓 Permainan Edukatif Matematika
+
+            <div class="game-icon">
+                ⚛️
+            </div>
+
+            <h3>
+                Proton, Elektron & Netron
+            </h3>
+
+            <p>
+                Pelajari konsep bilangan positif, negatif,
+                dan nol melalui permainan partikel yang
+                interaktif dan menyenangkan.
+            </p>
+
         </div>
+
+        <div class="play">
+            ▶ Mulai Permainan
+        </div>
+
+    </a>
+
+
+    <!-- GAME 2 -->
+
+    <a
+        class="game-card"
+        href="https://pebrudal-blip.github.io/perkalianyin-yang/"
+    >
 
         <div>
-            Kegiatan Pengabdian kepada Masyarakat
+
+            <div class="game-icon">
+                ✖️
+            </div>
+
+            <h3>
+                Perkalian Yin Yang
+            </h3>
+
+            <p>
+                Bangun pemahaman konsep perkalian melalui
+                aktivitas meletakkan dan mengambil proton
+                serta elektron.
+            </p>
+
         </div>
 
+        <div class="play">
+            ▶ Mulai Permainan
+        </div>
+
+    </a>
+
+
+    <!-- GAME 3 -->
+
+    <a
+        class="game-card"
+        href="https://pebrudal-blip.github.io/jarimatika/"
+    >
+
+        <div>
+
+            <div class="game-icon">
+                🖐️
+            </div>
+
+            <h3>
+                Jarimatika
+            </h3>
+
+            <p>
+                Pelajari dan latih konsep perkalian
+                menggunakan jari melalui permainan
+                matematika yang interaktif dan mudah
+                dimainkan.
+            </p>
+
+        </div>
+
+        <div class="play">
+            ▶ Mulai Permainan
+        </div>
+
+    </a>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    <div>
+        🎓 Permainan Edukatif Matematika
     </div>
+
+    <div>
+        Kegiatan Pengabdian kepada Masyarakat
+    </div>
+
+</div>
+
 
 </div>
 
