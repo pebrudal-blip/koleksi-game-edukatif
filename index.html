@@ -1,0 +1,396 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Game Edukatif - Pengabdian kepada Masyarakat</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.25), transparent 25%),
+        radial-gradient(circle at 85% 80%, rgba(255,255,255,.18), transparent 25%),
+        linear-gradient(135deg,#0f172a,#1e3a8a,#312e81);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+}
+
+.container{
+    width:100%;
+    max-width:1050px;
+}
+
+/* HEADER */
+
+.header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.25);
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:.5px;
+    margin-bottom:18px;
+    backdrop-filter:blur(8px);
+}
+
+.header h1{
+    margin:0;
+    font-size:clamp(28px,5vw,48px);
+    line-height:1.15;
+    font-weight:800;
+}
+
+.header .judul{
+    margin:16px auto 0;
+    max-width:850px;
+    font-size:clamp(16px,2.5vw,21px);
+    line-height:1.5;
+    color:#e0e7ff;
+}
+
+/* TEAM */
+
+.team{
+    margin:28px auto 35px;
+    text-align:center;
+}
+
+.team-title{
+    font-size:15px;
+    font-weight:bold;
+    color:#c7d2fe;
+    margin-bottom:14px;
+}
+
+.team-list{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.team-member{
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.15);
+    padding:8px 13px;
+    border-radius:20px;
+    font-size:13px;
+    backdrop-filter:blur(6px);
+}
+
+/* GAME */
+
+.game-title{
+    text-align:center;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.games{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.game-card{
+    position:relative;
+    overflow:hidden;
+    text-decoration:none;
+    color:#111827;
+    background:#fff;
+    border-radius:25px;
+    padding:30px;
+    min-height:280px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    transition:.25s ease;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.game-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 22px 45px rgba(0,0,0,.35);
+}
+
+.game-card:active{
+    transform:scale(.98);
+}
+
+.game-icon{
+    width:75px;
+    height:75px;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.game-card:first-child .game-icon{
+    background:linear-gradient(135deg,#dbeafe,#bfdbfe);
+}
+
+.game-card:nth-child(2) .game-icon{
+    background:linear-gradient(135deg,#fef3c7,#fde68a);
+}
+
+.game-card h3{
+    font-size:25px;
+    margin:0 0 10px;
+}
+
+.game-card p{
+    margin:0;
+    color:#64748b;
+    line-height:1.6;
+    font-size:15px;
+}
+
+.play{
+    margin-top:25px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    padding:13px 20px;
+    border-radius:14px;
+    color:#fff;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.game-card:first-child .play{
+    background:#2563eb;
+}
+
+.game-card:nth-child(2) .play{
+    background:#d97706;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#c7d2fe;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    body{
+        padding:18px;
+        align-items:flex-start;
+    }
+
+    .container{
+        padding-top:20px;
+    }
+
+    .header{
+        margin-bottom:25px;
+    }
+
+    .header h1{
+        font-size:30px;
+    }
+
+    .header .judul{
+        font-size:15px;
+    }
+
+    .games{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .game-card{
+        min-height:245px;
+        padding:25px;
+    }
+
+    .game-card h3{
+        font-size:22px;
+    }
+
+    .team-list{
+        gap:6px;
+    }
+
+    .team-member{
+        font-size:12px;
+        padding:7px 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="badge">
+            KEGIATAN PENGABDIAN KEPADA MASYARAKAT
+        </div>
+
+        <h1>
+            Game Edukatif Matematika
+        </h1>
+
+        <div class="judul">
+            Matematika Tanpa Hafalan:
+            Penanaman Konsep Perkalian Melalui Permainan Edukatif
+            bagi Siswa Sekolah Gugus II Payakumbuh
+        </div>
+
+    </div>
+
+
+    <!-- TIM -->
+
+    <div class="team">
+
+        <div class="team-title">
+            TIM PENGABDIAN KEPADA MASYARAKAT
+        </div>
+
+        <div class="team-list">
+
+            <div class="team-member">Pebrudal Zanu</div>
+            <div class="team-member">Helma</div>
+            <div class="team-member">Dewi Murni</div>
+            <div class="team-member">Muhammad Subhan</div>
+            <div class="team-member">Riry Sriningsih</div>
+            <div class="team-member">Yoli Agnesia</div>
+            <div class="team-member">Media Rosha</div>
+            <div class="team-member">Meira Parma Dewi</div>
+            <div class="team-member">Ayuni Kemala Safira</div>
+            <div class="team-member">Yusmet Rizal</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PILIHAN GAME -->
+
+    <div class="game-title">
+        🎮 Pilih Permainan
+    </div>
+
+
+    <div class="games">
+
+        <!-- GAME 1 -->
+
+        <a
+            class="game-card"
+            href="https://pebrudal-blip.github.io/yin-yang/"
+        >
+
+            <div>
+
+                <div class="game-icon">
+                    ⚛️
+                </div>
+
+                <h3>
+                    Proton, Elektron & Netron
+                </h3>
+
+                <p>
+                    Pelajari konsep bilangan positif, negatif,
+                    dan nol melalui permainan partikel yang
+                    interaktif dan menyenangkan.
+                </p>
+
+            </div>
+
+            <div class="play">
+                ▶ Mulai Permainan
+            </div>
+
+        </a>
+
+
+        <!-- GAME 2 -->
+
+        <a
+            class="game-card"
+            href="https://pebrudal-blip.github.io/perkalianyin-yang/"
+        >
+
+            <div>
+
+                <div class="game-icon">
+                    ✖️
+                </div>
+
+                <h3>
+                    Perkalian Yin Yang
+                </h3>
+
+                <p>
+                    Bangun pemahaman konsep perkalian melalui
+                    aktivitas meletakkan dan mengambil proton
+                    serta elektron.
+                </p>
+
+            </div>
+
+            <div class="play">
+                ▶ Mulai Permainan
+            </div>
+
+        </a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <div>
+            🎓 Permainan Edukatif Matematika
+        </div>
+
+        <div>
+            Kegiatan Pengabdian kepada Masyarakat
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+```
