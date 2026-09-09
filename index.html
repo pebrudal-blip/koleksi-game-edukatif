@@ -61,11 +61,6 @@ body{
     margin-bottom:30px;
 }
 
-
-/* =========================
-   HEADER UTAMA
-========================= */
-
 .header-main{
 
     display:flex;
@@ -74,9 +69,9 @@ body{
 
     justify-content:center;
 
-    gap:25px;
+    gap:28px;
 
-    max-width:1000px;
+    max-width:1050px;
 
     margin:0 auto;
 }
@@ -88,28 +83,22 @@ body{
 
 .logo-unp{
 
-    width:115px;
-    height:115px;
+    width:125px;
+    height:125px;
 
     object-fit:contain;
-
-    background:#fff;
-
-    padding:8px;
-
-    border-radius:50%;
 
     flex-shrink:0;
 
     display:block;
 
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.30);
+    filter:
+        drop-shadow(0 8px 15px rgba(0,0,0,.30));
 }
 
 
 /* =========================
-   HEADER TEXT
+   TEKS HEADER
 ========================= */
 
 .header-text{
@@ -428,27 +417,22 @@ body{
 ========================= */
 
 .game-card:nth-child(1) .play{
-
     background:#2563eb;
 }
 
 .game-card:nth-child(2) .play{
-
     background:#d97706;
 }
 
 .game-card:nth-child(3) .play{
-
     background:#16a34a;
 }
 
 .game-card:nth-child(4) .play{
-
     background:#db2777;
 }
 
 .game-card:nth-child(5) .play{
-
     background:#7c3aed;
 }
 
@@ -533,11 +517,9 @@ body{
 
     .logo-unp{
 
-        width:90px;
+        width:100px;
 
-        height:90px;
-
-        padding:7px;
+        height:100px;
 
     }
 
@@ -623,11 +605,16 @@ body{
     <div class="header-main">
 
 
-        <!-- LOGO UNP DI SEBELAH KIRI -->
+        <!-- =========================
+             LOGO UNP
+             FILE logo.png HARUS
+             BERADA DI FOLDER YANG SAMA
+             DENGAN index.html
+        ========================= -->
 
         <img
             class="logo-unp"
-            src="https://drive.google.com/uc?export=view&id=1-iDE-z6Ky632gjSheiwqXhkY9RMt5zCf"
+            src="logo.png"
             alt="Logo Universitas Negeri Padang"
         >
 
@@ -747,7 +734,9 @@ body{
 <div class="games">
 
 
-<!-- GAME 1 -->
+<!-- =========================
+     GAME 1
+========================= -->
 
 <a
     class="game-card"
@@ -782,7 +771,9 @@ body{
 </a>
 
 
-<!-- GAME 2 -->
+<!-- =========================
+     GAME 2
+========================= -->
 
 <a
     class="game-card"
@@ -817,7 +808,9 @@ body{
 </a>
 
 
-<!-- GAME 3 -->
+<!-- =========================
+     GAME 3
+========================= -->
 
 <a
     class="game-card"
@@ -853,7 +846,9 @@ body{
 </a>
 
 
-<!-- GAME 4 -->
+<!-- =========================
+     GAME 4
+========================= -->
 
 <a
     class="game-card"
@@ -888,7 +883,9 @@ body{
 </a>
 
 
-<!-- GAME 5 -->
+<!-- =========================
+     GAME 5
+========================= -->
 
 <a
     class="game-card"
@@ -932,16 +929,13 @@ body{
 
 <div class="footer">
 
-
     <div>
         🎓 Permainan Edukatif Matematika
     </div>
 
-
     <div>
         Kegiatan Pengabdian kepada Masyarakat
     </div>
-
 
 </div>
 
